@@ -28,8 +28,10 @@ IF "%esp8266_select%"=="n" (
 	echo Yes
 )
 
-del /f /s /q "%~dp0"\.git\index.lock > nul
-rd /q /s "%~dp0"\.git\index.lock > nul
+IF EXIST "%~dp0"\.git\index.lock ( 
+	del /f /s /q "%~dp0"\.git\index.lock > nul
+	rd /q /s "%~dp0"\.git\index.lock > nul
+)
 
 echo.
 echo.
