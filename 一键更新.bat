@@ -27,6 +27,14 @@ IF "%esp8266_select%"=="n" (
 ) ELSE (
 	echo Yes
 )
+echo.
+set stm32_select=
+set /p stm32_select=Add STM32(y/n):
+IF "%stm32_select%"=="n" (
+	echo No
+) ELSE (
+	echo Yes
+)
 
 IF EXIST "%~dp0"\.git\index.lock ( 
 	del /f /s /q "%~dp0"\.git\index.lock > nul
@@ -117,6 +125,47 @@ IF "%esp8266_select%"=="n" (
 		echo.
 		cd "%~dp0"\PortableGit\cmd\
 		git clone https://gitee.com/mixlyplus/win_esp8266.git "%~dp0arduino\portable\packages\esp8266\
+	)
+)
+
+rem 更新stm32硬件仓库
+IF "%stm32_select%"=="n" (
+	IF EXIST "%~dp0"\arduino\portable\packages\stm32duino (
+		del /f /s /q "%~dp0"\arduino\portable\packages\stm32duino > nul
+		rd /q /s "%~dp0"\arduino\portable\packages\stm32duino > nul
+	)
+	IF EXIST "%~dp0"\arduino\portable\packages\arduino\tools\arm-none-eabi-gcc (
+		del /f /s /q "%~dp0"\arduino\portable\packages\arduino\tools\arm-none-eabi-gcc > nul
+		rd /q /s "%~dp0"\arduino\portable\packages\arduino\tools\arm-none-eabi-gcc > nul
+	)
+	rem 删除STM32界面
+	del /f /s /q "%~dp0"\blockly\apps\mixly\index_board_Arduino_STM32F103C8T6.html > nul
+) ELSE (
+	IF EXIST "%~dp0"\arduino\portable\packages\stm32duino\.git (
+		echo A|xcopy "%~dp0"\PortableGit "%~dp0"\arduino\portable\packages\stm32duino\PortableGit\ /s /f /h > nul
+		echo.
+		echo.
+		cd "%~dp0"\arduino\portable\packages\stm32duino\PortableGit\cmd\
+		git reset --hard origin/master
+		git pull origin master
+		cd "%~dp0"
+		del /f /s /q "%~dp0"\arduino\portable\packages\stm32duino\PortableGit > nul
+		rd /q /s "%~dp0"\arduino\portable\packages\stm32duino\PortableGit > nul
+		echo A|xcopy "%~dp0"\arduino\portable\packages\stm32duino\arm-none-eabi-gcc "%~dp0"\arduino\portable\packages\arduino\tools\arm-none-eabi-gcc\ /s /f /h > nul
+		del /f /s /q "%~dp0"\arduino\portable\packages\stm32duino\arm-none-eabi-gcc > nul
+		rd /q /s "%~dp0"\arduino\portable\packages\stm32duino\arm-none-eabi-gcc > nul
+	) ELSE (
+		IF EXIST "%~dp0"\arduino\portable\packages\stm32duino (
+			del /f /s /q "%~dp0"\arduino\portable\packages\stm32duino > nul
+			rd /q /s "%~dp0"\arduino\portable\packages\stm32duino > nul
+		)
+		echo.
+		echo.
+		cd "%~dp0"\PortableGit\cmd\
+		git clone https://gitee.com/mixlyplus/win_stm32.git "%~dp0arduino\portable\packages\stm32duino\
+		echo A|xcopy "%~dp0"\arduino\portable\packages\stm32duino\arm-none-eabi-gcc "%~dp0"\arduino\portable\packages\arduino\tools\arm-none-eabi-gcc\ /s /f /h > nul
+		del /f /s /q "%~dp0"\arduino\portable\packages\stm32duino\arm-none-eabi-gcc > nul
+		rd /q /s "%~dp0"\arduino\portable\packages\stm32duino\arm-none-eabi-gcc > nul
 	)
 )
 

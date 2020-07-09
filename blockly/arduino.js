@@ -270,8 +270,8 @@ Blockly.Arduino.ORDER_NONE = 99; // (...)
 		serial_select: [["Serial", "Serial"], ["Serial1", "Serial1"], ["Serial2", "Serial2"]],
 		serial : 9600
 	},
-	arduino_stm32f103c8t6: {
-    description : "STM32F103C8T6",
+	arduino_stm32: {
+    description : "STM32",
     digital : [["PA0", "PA0"], ["PA1", "PA1"], ["PA2", "PA2"], ["PA3", "PA3"], ["PA4", "PA4"], ["PA5", "PA5"], ["PA6", "PA6"], ["PA7", "PA7"], ["PA8", "PA8"], ["PA9", "PA9"], ["PA10", "PA10"], ["PA11", "PA11"], ["PA12", "PA12"], ["PA13", "PA13"], ["PA14", "PA14"], ["PA15", "PA15"], ["PB0", "PB0"], ["PB1", "PB1"], ["PB2", "PB2"], ["PB3", "PB3"], ["PB4", "PB4"], ["PB5", "PB5"], ["PB6", "PB6"], ["PB7", "PB7"], ["PB8", "PB8"], ["PB9", "PB9"], ["PB10", "PB10"], ["PB11", "PB11"], ["PB12", "PB12"], ["PB13", "PB113"], ["PB14", "PB14"], ["PB15", "PB15"], ["PC13", "PC13"], ["PC14", "PC14"], ["PC15", "PC15"]],
     analog : [["PA0", "PA0"], ["PA1", "PA1"], ["PA2", "PA2"], ["PA3", "PA3"], ["PA4", "PA4"], ["PA5", "PA5"], ["PA6", "PA6"], ["PA7", "PA7"], ["PA8", "PA8"], ["PA9", "PA9"], ["PA10", "PA10"], ["PA11", "PA11"], ["PA12", "PA12"], ["PA13", "PA13"], ["PA14", "PA14"], ["PA15", "PA15"], ["PB0", "PB0"], ["PB1", "PB1"]],
     pwm : [["PA0", "PA0"], ["PA1", "PA1"], ["PA2", "PA2"], ["PA3", "PA3"], ["PA6", "PA6"], ["PA7", "PA7"], ["PA8", "PA8"], ["PA9", "PA9"], ["PA10", "PA10"], ["PB0", "PB0"], ["PB1", "PB1"], ["PB6", "PB6"], ["PB7", "PB7"], ["PB8", "PB8"], ["PB9", "PB9"]],
