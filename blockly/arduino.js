@@ -303,7 +303,7 @@ profile['Arduino HandBit']=profile["esp32_handbit"];
 profile['Arduino MixePi']=profile["esp32_mixepi"];
 profile['Arduino MixGo']=profile["esp32_MixGo"];
 //STM32
-profile['Arduino STM32F103C8T6']=profile["arduino_stm32f103c8t6"];
+profile['Generic STM32F103C series']=profile['Generic STM32F103C6/fake STM32F103C8']=profile['Generic STM32F103R series']=profile['Generic STM32F103T series']=profile['STM Nucleo F103RB (STLink)']=profile['Maple Mini']=profile['Maple Mini']=profile["arduino_stm32"];
 //set default profile to arduino standard-compatible board
 //profile["default"] = profile["arduino_standard"];
 //alert(profile.default.digital[0]);
