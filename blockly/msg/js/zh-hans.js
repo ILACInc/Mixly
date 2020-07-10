@@ -2160,7 +2160,6 @@ Blockly.blynk_IOT_DOUBLE = '浮点型';
 Blockly.blynk_IOT_VAR_NAME = '变量名';
 Blockly.blynk_TIMER = 'Blynk定时器';
 Blockly.blynk_IOT_WidgetLED = 'LED组件 虚拟管脚';
-Blockly.blynk_iot_WidgetLED_COLOR = '颜色';
 Blockly.blynk_IOT_IR_SEND = '红外控制空调 品牌';
 Blockly.blynk_IOT_GREE = '格力';
 Blockly.blynk_IOT_MIDEA = '美的';

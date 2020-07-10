@@ -270,6 +270,28 @@ Blockly.Arduino.ORDER_NONE = 99; // (...)
 		serial_select: [["Serial", "Serial"], ["Serial1", "Serial1"], ["Serial2", "Serial2"]],
 		serial : 9600
 	},
+	m5stick_c: {
+    description : "M5Stick-C",
+    digital : [["G0", "G0"],["G9", "G9"],["G10", "G10"],["G26", "G26"],["G32", "G32"],["G33", "G33"],["G36", "G36"],["G37", "G37"],["G39", "G39"]],
+    digitalWrite: [["G0", "G0"],["G9", "G9"],["G10", "G10"],["G26", "G26"],["G32", "G32"],["G33", "G33"],["G36", "G36"],["G37", "G37"],["G39", "G39"]],
+    analog : [["G0", "G0"],["G26", "G26"],["G32", "G32"]],
+    pwm : [["G0", "G0"],["G26", "G26"],["G32", "G32"]],
+    interrupt : [["G0", "G0"],["G9", "G9"],["G10", "G10"],["G26", "G26"],["G32", "G32"],["G33", "G33"],["G36", "G36"],["G37", "G37"],["G39", "G39"]],
+    tx: [["G0", "G0"],["G26", "G26"]],
+	dac: [["DAC1", "DAC1"], ["DAC2", "DAC2"]],
+    SDA:[["SDA","SDA"]],
+	SCL:[["SCL","SCL"]],
+	MOSI:[["MOSI","MOSI"]],
+	MISO:[["MISO","MISO"]],
+	SCK:[["SCK","SCK"]],
+	TONE_NOTE:[["NOTE_C","NOTE_C"],["NOTE_Cs","NOTE_Cs"],["NOTE_D","NOTE_D"],["NOTE_Eb","NOTE_Eb"],["NOTE_E","NOTE_E"],["NOTE_F","NOTE_F"],["NOTE_Fs","NOTE_Fs"],["NOTE_G","NOTE_G"],["NOTE_Gs","NOTE_Gs"],["NOTE_A","NOTE_A"],["NOTE_Bb","NOTE_Bb"],["NOTE_B","NOTE_B"],["NOTE_MAX","NOTE_MAX"]],
+	OCTAVE:[["0", "0"],["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"],["6", "6"],["7", "7"]],
+	CHANNEL:[["0", "0"],["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"],["6", "6"],["7", "7"],["8", "8"],["9", "9"],["10", "10"],["11", "11"],["12", "12"],["13", "13"],["14", "14"],["15", "15"]],
+	PWM_RESOLUTION:[["8", "8"],["9", "9"],["10", "10"],["11", "11"],["12", "12"],["13", "13"],["14", "14"],["15", "15"],["16", "16"],["17", "17"],["18", "18"],["19", "19"],["20", "20"]],
+	touch: [["G0", "G0"],["G32", "G32"], ["G33", "G33"]],
+    serial_select: [["Serial", "Serial"], ["Serial1", "Serial1"], ["Serial2", "Serial2"]],
+    serial : 9600
+  },
 	arduino_stm32: {
     description : "STM32",
     digital : [["PA0", "PA0"], ["PA1", "PA1"], ["PA2", "PA2"], ["PA3", "PA3"], ["PA4", "PA4"], ["PA5", "PA5"], ["PA6", "PA6"], ["PA7", "PA7"], ["PA8", "PA8"], ["PA9", "PA9"], ["PA10", "PA10"], ["PA11", "PA11"], ["PA12", "PA12"], ["PA13", "PA13"], ["PA14", "PA14"], ["PA15", "PA15"], ["PB0", "PB0"], ["PB1", "PB1"], ["PB2", "PB2"], ["PB3", "PB3"], ["PB4", "PB4"], ["PB5", "PB5"], ["PB6", "PB6"], ["PB7", "PB7"], ["PB8", "PB8"], ["PB9", "PB9"], ["PB10", "PB10"], ["PB11", "PB11"], ["PB12", "PB12"], ["PB13", "PB113"], ["PB14", "PB14"], ["PB15", "PB15"], ["PC13", "PC13"], ["PC14", "PC14"], ["PC15", "PC15"]],
@@ -302,6 +324,7 @@ profile['Arduino ESP32']=profile['Arduino ESP32 Generic']=profile['"WeMos" WiFi&
 profile['Arduino HandBit']=profile["esp32_handbit"];
 profile['Arduino MixePi']=profile["esp32_mixepi"];
 profile['Arduino MixGo']=profile["esp32_MixGo"];
+profile["M5Stick-C"]=profile["m5stick_c"];
 //STM32
 profile['Generic STM32F103C series']=profile['Generic STM32F103C6/fake STM32F103C8']=profile['Generic STM32F103R series']=profile['Generic STM32F103T series']=profile['STM Nucleo F103RB (STLink)']=profile['Maple Mini']=profile['Maple Mini']=profile["arduino_stm32"];
 //set default profile to arduino standard-compatible board

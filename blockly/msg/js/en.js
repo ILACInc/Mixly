@@ -2152,7 +2152,6 @@ Blockly.blynk_IOT_DOUBLE = 'Float';
 Blockly.blynk_IOT_VAR_NAME = 'Variable name';
 Blockly.blynk_TIMER = 'Blynk timer';
 Blockly.blynk_IOT_WidgetLED = 'LED component virtual pin';
-Blockly.blynk_iot_WidgetLED_COLOR = 'Color';
 Blockly.blynk_IOT_IR_SEND = 'Infrared controlled air conditioner brand';
 Blockly.blynk_IOT_GREE = 'Gree';
 Blockly.blynk_IOT_MIDEA = 'Beautiful';
