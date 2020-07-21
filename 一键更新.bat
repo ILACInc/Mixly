@@ -72,8 +72,6 @@ IF "%esp32_select%"=="n" (
 	del /f /s /q "%~dp0"\blockly\apps\mixly\index_board_Arduino_HandBit.html > nul
 	del /f /s /q "%~dp0"\blockly\apps\mixly\index_board_Arduino_MixePi.html > nul
 	del /f /s /q "%~dp0"\blockly\apps\mixly\index_board_Arduino_MixGo.html > nul
-	del /f /s /q "%~dp0"\blockly\apps\mixly\index_board_M5Stick-C.html > nul
-	del /f /s /q "%~dp0"\blockly\apps\mixly\index_board_Sidan_ESP32.html > nul
 ) ELSE (
 	IF EXIST "%~dp0"\arduino\portable\packages\esp32\.git (
 		echo A|xcopy "%~dp0"\PortableGit "%~dp0"\arduino\portable\packages\esp32\PortableGit\ /s /c /h > nul
@@ -139,7 +137,7 @@ IF "%stm32_select%"=="n" (
 		rd /q /s "%~dp0"\arduino\portable\packages\arduino\tools\arm-none-eabi-gcc > nul
 	)
 	rem 删除STM32界面
-	del /f /s /q "%~dp0"\blockly\apps\mixly\index_board_Arduino_STM32F103C8T6.html > nul
+	del /f /s /q "%~dp0"\blockly\apps\mixly\index_board_Arduino_STM32.html > nul
 ) ELSE (
 	IF EXIST "%~dp0"\arduino\portable\packages\stm32duino\.git (
 		echo A|xcopy "%~dp0"\PortableGit "%~dp0"\arduino\portable\packages\stm32duino\PortableGit\ /s /f /h > nul
