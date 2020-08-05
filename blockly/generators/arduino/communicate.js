@@ -34,7 +34,7 @@ Blockly.Arduino.ir_recv = function () {
     code += '  if(results_' + dropdown_pin + '.decode_type>=1&&results_' + dropdown_pin + '.decode_type<=17){\n';
     code += '    type=typelist[results_' + dropdown_pin + '.decode_type];\n'
     code += '  }\n';
-    code += '  Serial.print("IR TYPE:"+type+"  ");\n';
+    code += '  Serial.println("IR TYPE:"+type+"  ");\n';
     code += branch;
     code += '  irrecv_' + dropdown_pin + '.resume();\n'
     code += '} else {\n';
