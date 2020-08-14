@@ -137,14 +137,14 @@ Blockly.Arduino.display_TM1637_displyPrint = function () {
     Blockly.Arduino.definitions_['var_declare_SevenSegmentTM1637'] = 'SevenSegmentExtended  display(' + tm1637_CLK + ',' + tm1637_DIO + ');';
     var hour = Blockly.Arduino.valueToCode(this, 'hour', Blockly.Arduino.ORDER_ATOMIC);
     var minute = Blockly.Arduino.valueToCode(this, 'minute', Blockly.Arduino.ORDER_ATOMIC);
-    var dropdown_stat = Blockly.Arduino.valueToCode(this, 'STAT', Blockly.Arduino.ORDER_ATOMIC);
+    var dropdown_stat = this.getFieldValue("STAT");
     var code = 'display.printTime(' + hour + ',' + minute +','+dropdown_stat+');\n';
     return code;
   };
 
   Blockly.Arduino.display_TM1637_clearDisplay = function () {
-    var code = 'display.clear();\n';
-    return code;
+    var stat=this.getFieldValue("STAT");
+  return 'display.'+stat+'();\n';
   };
 
   Blockly.Arduino.display_TM1637_Brightness = function () {
