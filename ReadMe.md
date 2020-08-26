@@ -10,6 +10,4 @@ http://mixly.org
 
 http://wiki.mixly.org
 
-### 更新说明
-
-https://gitee.com/mixlyplus/Mixly/blob/master/CHANGELOG.md
+CHANGELOG.md
